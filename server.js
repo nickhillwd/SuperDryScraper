@@ -25,7 +25,7 @@ app.get('/scrape', function(req, res){
           price: price
         }
 
-        results.push(data);
+        console.log(results.length);
       })
       console.log(results, "finished scraping: check output.json file");
       fs.writeFile('output.json', JSON.stringify(results, null, 1));
@@ -37,3 +37,5 @@ app.get('/scrape', function(req, res){
 
 app.listen('5000');
 console.log('listening on port: 5000 - hit /scrape to get results from new in @ mens superdry');
+
+module.exports = app;

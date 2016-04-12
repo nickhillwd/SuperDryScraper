@@ -10,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^3.5.0",
     "cheerio": "^0.20.0",
     "express": "^4.13.4",
     "fs": "0.0.2",
-    "request": "^2.70.0"
+    "mocha": "^2.4.5",
+    "request": "^2.70.0",
+    "supertest": "^1.2.0"
   }
 }
