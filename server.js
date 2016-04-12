@@ -24,9 +24,8 @@ app.get('/scrape', function(req, res){
           title: title.trim(),
           price: price
         }
-
-        console.log(results.length);
-      })
+        results.push(data);
+      });
       console.log(results, "finished scraping: check output.json file");
       fs.writeFile('output.json', JSON.stringify(results, null, 1));
     }
