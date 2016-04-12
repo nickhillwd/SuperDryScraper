@@ -19,6 +19,9 @@ app.get('/scrape', function(req, res){
         var eachItem = $(this);
         var title = (eachItem).prev().text();
         var price = (eachItem).children().first().text();
+        var link = (eachItem).prev().attr('href');
+
+        console.log(typeof(link));
 
         var data = {
           title: title.trim(),
