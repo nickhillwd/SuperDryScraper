@@ -14,19 +14,17 @@ app.get('/scrape', function(req, res){
   request(url, function(error, response, body){
     if (!error && response.statusCode == 200){
       var $ = cheerio.load(body);
-      //console.log(body);
       $('div.prices').each(function(i, element){
         var eachItem = $(this);
         var title = (eachItem).prev().text();
         var price = (eachItem).children().first().text();
         var link = (eachItem).prev().attr('href');
 
-        console.log(typeof(link));
-
         var data = {
           title: title.trim(),
-          price: price
-        }
+          price: price,
+          link: link
+        };
         results.push(data);
       });
       console.log(results, "finished scraping: check output.json file");

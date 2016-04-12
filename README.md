@@ -8,7 +8,7 @@ This small app is using cheerio to scrape the men's new-in section of the superd
 
 #### Before you begin:
 
-1) NPM install - you will ned a few dependencies; please see package.json for all dependencies
+1) NPM install - you will need a few dependencies; please see package.json for all dependencies
 
 2) Run localhost 5000
 
